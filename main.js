@@ -42,9 +42,14 @@ const students = [
       gender: "M"
     }
   ];
+  const listElement = document.getElementById('printHere')
   
   for(let i = 0; i < students.length; i++) {
       if (students[i].gender === "F") {
           console.log(students[i].name);
+          let liElement = document.createElement('li')
+          let textNode = document.createTextNode(students[i].name)
+          liElement.appendChild(textNode)
+          listElement.appendChild(liElement)
       }
   }
